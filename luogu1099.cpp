@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int MAXN = 5E5 + 5 , inf = 0x7fffffff;//Êı×é¿ªĞ¡À±  
+const int MAXN = 5E5 + 5 , inf = 0x7fffffff;//æ•°ç»„å¼€å°è¾£  
 int n,s,tail,d1,d2,cur = -1;
 int Head[MAXN],Temp[MAXN],Reach[MAXN];
 int Fa[MAXN],Falen[MAXN],Q[MAXN],Vis[MAXN],D[MAXN]; 
@@ -70,10 +70,10 @@ void getD()
 		if(x == d1)	break;
 		x = Fa[x];
 	}
-	//Falen£º´Ód1µ½d2µÄË³Ğò£¬¸÷¸öµãµÄfalen 
-	for(int i = 1 ; i * 2 <= tail ; i ++)	swap(Q[i],Q[tail - i + 1]);//Ê¹µÃµãµÄÅÅÁĞ´Ód1µ½d2¡£ 
+	//Falenï¼šä»d1åˆ°d2çš„é¡ºåºï¼Œå„ä¸ªç‚¹çš„falen 
+	for(int i = 1 ; i * 2 <= tail ; i ++)	swap(Q[i],Q[tail - i + 1]);//ä½¿å¾—ç‚¹çš„æ’åˆ—ä»d1åˆ°d2ã€‚ 
 }
-void getECC(int x,int fa,int src,int dis)//ÎŞÂÛÈçºÎÒª¼ÇfaÒÔdfs!!! 
+void getECC(int x,int fa,int src,int dis)//æ— è®ºå¦‚ä½•è¦è®°faä»¥dfs!!! 
 {
 	D[src] = max(D[src],dis);
 	for(int h = Head[x] ; h != -1 ; h = Edge[h].next)
